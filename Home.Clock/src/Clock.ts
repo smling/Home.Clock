@@ -16,3 +16,4 @@
         clearTimeout(this.timerToken);
     }
 }
+//http://api.wunderground.com/api/f1439c571fe4a431/conditions/q/22.32,114.18.json
