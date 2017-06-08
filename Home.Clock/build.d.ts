@@ -14,15 +14,20 @@ declare class Greeter {
     stop(): void;
 }
 interface IWeatherService {
-    reload(): any;
+    findCurrentObservation(latitude: number, longitude: number): any;
+    findWeatherWarnings(): any;
 }
 declare class ObservatoryWeatherService implements IWeatherService {
     private _weatherWarningWebPath;
-    getWeatherWarningSummary(): WeatherWarning[];
-    reload(): void;
+    findCurrentObservation(latitude: number, longitude: number): void;
+    findWeatherWarnings(): WeatherWarning[];
 }
-declare class OpenWeatherMapService implements IWeatherService {
-    reload(): void;
+declare class WeatherUndergroundService implements IWeatherService {
+    protected _rootPath: string;
+    protected _apiKey: string;
+    protected _conditionPath: string;
+    findCurrentObservation(latitude: number, longitude: number): void;
+    findWeatherWarnings(): any;
 }
 declare class WeatherWarning {
     name: string;

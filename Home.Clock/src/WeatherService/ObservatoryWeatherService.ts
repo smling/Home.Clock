@@ -1,7 +1,12 @@
 ﻿class ObservatoryWeatherService implements IWeatherService {
     private _weatherWarningWebPath: string = "http://rss.weather.gov.hk/rss/WeatherWarningSummaryv2_uc.xml";
 
-    getWeatherWarningSummary() {
+    findCurrentObservation(latitude: number, longitude: number)
+    {
+
+    }
+
+    findWeatherWarnings() {
         let result: Array<WeatherWarning>=[];
         jQuery.get(this._weatherWarningWebPath).done(function (data: any) {
             let xmlDocument: XMLDocument = jQuery.parseXML(data.documentElement.innerHTML);
@@ -30,9 +35,5 @@
             alert(data.message);
         });
         return result;
-    }
-
-    reload() {
-        this.getWeatherWarningSummary();
     }
 }

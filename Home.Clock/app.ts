@@ -8,7 +8,7 @@ window.onload = () => {
     clock.start();
 
     let weatherService: IWeatherService = new ObservatoryWeatherService();
-    weatherService.reload();
+    weatherService.findWeatherWarnings();
     //var greeter = new Clock(el);
     //greeter.start();
 };

@@ -59,7 +59,7 @@
     <TypeScriptCompile Include="src\WeatherService\IWeatherService.ts" />
     <TypeScriptCompile Include="src\WeatherService\WeatherWarning.ts" />
     <TypeScriptCompile Include="src\WeatherService\ObservatoryWeatherService.ts" />
-    <TypeScriptCompile Include="src\WeatherService\OpenWeatherMapService.ts" />
+    <TypeScriptCompile Include="src\WeatherService\WeatherUndergroundService.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

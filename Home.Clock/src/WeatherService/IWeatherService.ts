@@ -1,4 +1,5 @@
 ﻿interface IWeatherService
 {
-    reload();
+    findCurrentObservation(latitude: number, longitude: number)
+    findWeatherWarnings();
 }

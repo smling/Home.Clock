@@ -32,7 +32,9 @@ var ObservatoryWeatherService = (function () {
     function ObservatoryWeatherService() {
         this._weatherWarningWebPath = "http://rss.weather.gov.hk/rss/WeatherWarningSummaryv2_uc.xml";
     }
-    ObservatoryWeatherService.prototype.getWeatherWarningSummary = function () {
+    ObservatoryWeatherService.prototype.findCurrentObservation = function (latitude, longitude) {
+    };
+    ObservatoryWeatherService.prototype.findWeatherWarnings = function () {
         var result = [];
         jQuery.get(this._weatherWarningWebPath).done(function (data) {
             var xmlDocument = jQuery.parseXML(data.documentElement.innerHTML);
@@ -50,17 +52,21 @@ var ObservatoryWeatherService = (function () {
         });
         return result;
     };
-    ObservatoryWeatherService.prototype.reload = function () {
-        this.getWeatherWarningSummary();
-    };
     return ObservatoryWeatherService;
 })();
-var OpenWeatherMapService = (function () {
-    function OpenWeatherMapService() {
+var WeatherUndergroundService = (function () {
+    function WeatherUndergroundService() {
+        this._rootPath = "http://api.wunderground.com/api/";
+        this._apiKey = "f1439c571fe4a431";
+        this._conditionPath = this._rootPath + "/api/" + this._apiKey + "/conditions/q/{lat},{long}.json";
     }
-    OpenWeatherMapService.prototype.reload = function () {
+    WeatherUndergroundService.prototype.findCurrentObservation = function (latitude, longitude) {
+        var _requestUrl = this._conditionPath.replace("{lat}", latitude.toString()).replace("{long}", longitude.toString());
     };
-    return OpenWeatherMapService;
+    WeatherUndergroundService.prototype.findWeatherWarnings = function () {
+        return null;
+    };
+    return WeatherUndergroundService;
 })();
 var WeatherWarning = (function () {
     function WeatherWarning() {

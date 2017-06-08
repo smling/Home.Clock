@@ -5,6 +5,6 @@ window.onload = function () {
     var clock = new Clock(clockElement);
     clock.start();
     var weatherService = new ObservatoryWeatherService();
-    weatherService.reload();
+    weatherService.findWeatherWarnings();
 };
 //# sourceMappingURL=app.js.map
