@@ -6,5 +6,7 @@ window.onload = function () {
     clock.start();
     var weatherService = new ObservatoryWeatherService();
     weatherService.findWeatherWarnings();
+    var weatherUndergroundService = new WeatherUndergroundService();
+    weatherUndergroundService.findCurrentObservation(22.317930, 114.265863);
 };
 //# sourceMappingURL=app.js.map

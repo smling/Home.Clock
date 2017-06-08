@@ -58,10 +58,16 @@ var WeatherUndergroundService = (function () {
     function WeatherUndergroundService() {
         this._rootPath = "http://api.wunderground.com/api/";
         this._apiKey = "f1439c571fe4a431";
-        this._conditionPath = this._rootPath + "/api/" + this._apiKey + "/conditions/q/{lat},{long}.json";
+        this._conditionPath = this._rootPath + this._apiKey + "/conditions/q/{lat},{long}.json";
     }
     WeatherUndergroundService.prototype.findCurrentObservation = function (latitude, longitude) {
         var _requestUrl = this._conditionPath.replace("{lat}", latitude.toString()).replace("{long}", longitude.toString());
+        ;
+        jQuery.getJSON(_requestUrl).done(function (data) {
+            alert(data);
+        }).fail(function (data) {
+            alert(data.message);
+        });
     };
     WeatherUndergroundService.prototype.findWeatherWarnings = function () {
         return null;

@@ -9,6 +9,10 @@ window.onload = () => {
 
     let weatherService: IWeatherService = new ObservatoryWeatherService();
     weatherService.findWeatherWarnings();
+    
+    let weatherUndergroundService: IWeatherService = new WeatherUndergroundService();
+    weatherUndergroundService.findCurrentObservation(22.317930, 114.265863);
+
     //var greeter = new Clock(el);
     //greeter.start();
 };
