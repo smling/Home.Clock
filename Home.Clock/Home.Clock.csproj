@@ -27,6 +27,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\flipclock.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -40,6 +41,8 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\flipclock.js" />
+    <Content Include="Scripts\flipclock.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
@@ -52,14 +55,17 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Scripts\typings\flipclock\flipclock.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\moment\moment.d.ts" />
     <TypeScriptCompile Include="src\Clock.ts" />
     <TypeScriptCompile Include="src\Greeter.ts" />
     <TypeScriptCompile Include="src\WeatherService\IWeatherService.ts" />
+    <TypeScriptCompile Include="src\WeatherService\WeatherUndergroundService.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\WeatherService\WeatherWarning.ts" />
     <TypeScriptCompile Include="src\WeatherService\ObservatoryWeatherService.ts" />
-    <TypeScriptCompile Include="src\WeatherService\WeatherUndergroundService.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
