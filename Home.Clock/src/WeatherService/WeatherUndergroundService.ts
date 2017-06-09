@@ -1,4 +1,4 @@
-﻿class WeatherUndergroundService implements IWeatherService {
+﻿class WeatherUndergroundService extends IWeatherService {
 
     protected _rootPath: string = "http://api.wunderground.com/api/";
     protected _apiKey: string = "f1439c571fe4a431";
@@ -13,7 +13,7 @@
 
         // Get result from Web API call.
         jQuery.getJSON(_requestUrl).done(function (data: any) {
-            alert(data);
+            //alert(data);
         }).fail(function (data: DOMException) {
             alert(data.message);
         });

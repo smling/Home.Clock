@@ -29,6 +29,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\flipclock.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\modern-light-wood-background-with-wooden-floor-texture-basketball-floor-texture-light-wooden-background-0.jpg" />
     <Content Include="index.html" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -60,12 +61,14 @@
     <TypeScriptCompile Include="Scripts\typings\moment\moment.d.ts" />
     <TypeScriptCompile Include="src\Clock.ts" />
     <TypeScriptCompile Include="src\Greeter.ts" />
+    <TypeScriptCompile Include="src\WeatherService\IRenderer.ts" />
     <TypeScriptCompile Include="src\WeatherService\IWeatherService.ts" />
     <TypeScriptCompile Include="src\WeatherService\WeatherUndergroundService.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\WeatherService\WeatherWarning.ts" />
     <TypeScriptCompile Include="src\WeatherService\ObservatoryWeatherService.ts" />
+    <TypeScriptCompile Include="src\WeatherService\WeatherWarningRenderer.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

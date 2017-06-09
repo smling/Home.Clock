@@ -1,4 +1,4 @@
-﻿class ObservatoryWeatherService implements IWeatherService {
+﻿class ObservatoryWeatherService extends IWeatherService {
     private _weatherWarningWebPath: string = "http://rss.weather.gov.hk/rss/WeatherWarningSummaryv2_uc.xml";
 
     findCurrentObservation(latitude: number, longitude: number)
@@ -31,9 +31,9 @@
                     result[result.length] = weatherWarning;
                 }
             }
+            return result;
         }).fail(function (data: DOMException) {
             alert(data.message);
         });
-        return result;
     }
 }

@@ -1,5 +1,7 @@
 ﻿body {
     font-family: 'Segoe UI', sans-serif;
+    background-image: url("images/modern-light-wood-background-with-wooden-floor-texture-basketball-floor-texture-light-wooden-background-0.jpg");
+    background-repeat:repeat;
 }
 
 span {
