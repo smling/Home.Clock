@@ -6,8 +6,8 @@ window.onload = () => {
     clock.start();
 
     let weatherService: IWeatherService = new ObservatoryWeatherService();
-    let weatherWarningRenderer: WeatherWarningRenderer = new WeatherWarningRenderer(document.getElementById("weatherWarning"));
-    weatherWarningRenderer.render(weatherService.findWeatherWarnings());
+    weatherService.findWeatherWarnings();
+    
     //let weatherWarnings: Array<WeatherWarning> = weatherService.findWeatherWarnings();
         
     let weatherUndergroundService: IWeatherService = new WeatherUndergroundService();
