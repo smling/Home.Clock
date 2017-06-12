@@ -16,7 +16,10 @@
             $('#`+ this.element.id + `').FlipClock({
                     clockFace: 'TwelveHourClock'
 				});`;
-        console.debug(code);
+        //let dateDisplay: HTMLElement = document.createElement("div");
+        //dateDisplay.innerHTML = new Date().toString();
+        //console.debug(code);
         this._clock = eval(code);
+        //Wthis.element.appendChild(dateDisplay);
     }
 }

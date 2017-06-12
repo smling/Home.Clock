@@ -6,6 +6,9 @@
     <title>TypeScript HTML App</title>
     <link rel="stylesheet" href="app.css" type="text/css" />
     <link rel="stylesheet" href="Content/flipclock.css" type="text/css" />
+    <link rel="stylesheet" href="Content/bootstrap.css" type="text/css" />
+
+
 
     <script src="Scripts/jquery-3.1.1.min.js"></script>
     <script src="Scripts/moment.js"></script>
@@ -15,7 +18,19 @@
 </head>
 <body>
     <div id="content">
-        <div id="clock"></div>
+        <div class="row">
+            <div class="col-sm-1">
+                <div class="date">
+                    <p><span class="year">2017</span>25<span class="month">May</span></p>
+                </div>
+            </div>
+            <div class="col-sm-11">
+                <div id="clock"></div>
+            </div>
+            
+            
+        </div>
+        
         <div id="weatherWarning"></div>
         <div id="weatherObservation"></div>
     </div>
