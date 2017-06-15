@@ -105,6 +105,7 @@
     <TypeScriptCompile Include="src\Clock.ts" />
     <TypeScriptCompile Include="src\FlipDate.ts" />
     <TypeScriptCompile Include="src\Greeter.ts" />
+    <TypeScriptCompile Include="src\PhotoWidget.ts" />
     <TypeScriptCompile Include="src\WeatherService\IRenderer.ts" />
     <TypeScriptCompile Include="src\WeatherService\IWeatherService.ts" />
     <TypeScriptCompile Include="src\WeatherService\WeatherCondition.ts" />
@@ -160,7 +161,7 @@
     <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
     <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
     <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
-    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptModuleKind>None</TypeScriptModuleKind>
     <TypeScriptOutFile>build.js</TypeScriptOutFile>
     <TypeScriptOutDir />
     <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>

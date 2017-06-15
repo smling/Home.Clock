@@ -14,6 +14,9 @@ window.onload = () => {
     let weatherUndergroundService: WeatherUndergroundService = new WeatherUndergroundService();
     weatherUndergroundService.start();
 
+    let photoWidget: PhotoWidget = new PhotoWidget();
+    photoWidget.start();
+
     //let flipDate: FlipDate = new FlipDate(document.getElementsByClassName("date").item[0]);
 
     //var greeter = new Clock(el);
