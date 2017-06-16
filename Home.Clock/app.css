@@ -68,14 +68,14 @@ span {
 
 #ClockWidget #Clock {
     display: block;
-    font-size: 80px; font-weight: bold; color:#dad8d8;
+    font-size: 80px; font-weight: bold; color:#fff;
     text-shadow: 4px 4px rgba(0,0,0,0.1);
     margin-bottom:-30px;
 }
 
 #ClockWidget #Date {
     display: block;
-    font-size: 40px; font-weight: bold; color:#dad8d8;
+    font-size: 40px; font-weight: bold; color:#fff;
     text-align:right;
     text-shadow: 4px 4px rgba(0,0,0,0.1);
     padding-top: 2px;
@@ -97,13 +97,17 @@ span {
 }
 
 #PhotoWidget {
-    position: absolute;
-    left:20px;
-    top: 20px;
-    width:94%;
-    height: 90%;
+    position:fixed;
+    margin:5%;
+    width:90%;
+    height:85%;
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
 
-    border: 10px solid #ccc;
+    border: 10px solid #fff;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
 }
+    #PhotoWidget img {
+
+    }
