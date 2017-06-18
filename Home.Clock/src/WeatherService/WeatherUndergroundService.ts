@@ -36,7 +36,7 @@
             }
 
             // Update UI.
-            (document.getElementById("ConditionIcon") as HTMLImageElement).src = "/images/weather-underground-icon-png/"+result.IconName+".png";
+            (document.getElementById("ConditionIcon") as HTMLImageElement).src = "images/weather-underground-icon-png/"+result.IconName+".png";
             document.getElementById("Location").textContent = result.Location;
             document.getElementById("ObservationTime").textContent = result.ObservationTime.toString();
             document.getElementById("RelativeHumidityString").textContent = result.RelativeHumidityString;

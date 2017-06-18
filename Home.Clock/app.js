@@ -1,12 +1,9 @@
 window.onload = function () {
-    var el = document.getElementById('content');
-    var clockElement = document.createElement("span");
-    el.appendChild(clockElement);
+    var clockElement = document.getElementById('ClockWidget');
     var clock = new Clock(clockElement);
-    clock.start();
-    var weatherService = new ObservatoryWeatherService();
-    weatherService.findWeatherWarnings();
     var weatherUndergroundService = new WeatherUndergroundService();
-    weatherUndergroundService.findCurrentObservation(22.317930, 114.265863);
+    weatherUndergroundService.start();
+    var photoWidget = new PhotoWidget(document.getElementById("PhotoWidget"));
+    photoWidget.start();
 };
 //# sourceMappingURL=app.js.map
