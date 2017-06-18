@@ -1,12 +1,12 @@
 ﻿class ObservatoryWeatherService extends IWeatherService {
     private _weatherWarningWebPath: string = "http://rss.weather.gov.hk/rss/WeatherWarningSummaryv2_uc.xml";
 
-    findCurrentObservation(latitude: number, longitude: number)
+    findCurrentObservation(latitude: number, longitude: number, doneCallback: JQueryPromiseCallback<any>, failCallBack: JQueryPromiseCallback<any>)
     {
-
+        throw new Error("Not implmement yet.");
     }
 
-    findWeatherWarnings() {
+    findWeatherWarnings(doneCallback: JQueryPromiseCallback<any>, failCallBack: JQueryPromiseCallback<any>) {
         let result: Array<WeatherWarning> = [];
         jQuery.ajax({
             url: this._weatherWarningWebPath,

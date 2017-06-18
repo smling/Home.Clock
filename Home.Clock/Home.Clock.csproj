@@ -10,7 +10,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -102,10 +102,14 @@
     <TypeScriptCompile Include="Scripts\typings\flipclock\flipclock.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\moment\moment.d.ts" />
-    <TypeScriptCompile Include="src\Clock.ts" />
+    <TypeScriptCompile Include="src\ClockWidget.ts" />
     <TypeScriptCompile Include="src\FlipDate.ts" />
     <TypeScriptCompile Include="src\Greeter.ts" />
     <TypeScriptCompile Include="src\PhotoWidget.ts" />
+    <TypeScriptCompile Include="src\Settings.ts" />
+    <TypeScriptCompile Include="src\WeatherService\WeatherServiceSources.ts" />
+    <TypeScriptCompile Include="src\WeatherWidget.ts" />
+    <TypeScriptCompile Include="src\WidgetBase.ts" />
     <TypeScriptCompile Include="src\WeatherService\IRenderer.ts" />
     <TypeScriptCompile Include="src\WeatherService\IWeatherService.ts" />
     <TypeScriptCompile Include="src\WeatherService\WeatherCondition.ts" />
@@ -161,7 +165,7 @@
     <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
     <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
     <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
-    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptModuleKind>System</TypeScriptModuleKind>
     <TypeScriptOutFile>build.js</TypeScriptOutFile>
     <TypeScriptOutDir />
     <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>

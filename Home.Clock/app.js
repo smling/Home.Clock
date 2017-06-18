@@ -1,9 +1,8 @@
 window.onload = function () {
-    var clockElement = document.getElementById('ClockWidget');
-    var clock = new Clock(clockElement);
-    var weatherUndergroundService = new WeatherUndergroundService();
-    weatherUndergroundService.start();
+    var clock = new ClockWidget(document.getElementById('ClockWidget'));
+    clock.start();
     var photoWidget = new PhotoWidget(document.getElementById("PhotoWidget"));
     photoWidget.start();
+    var weatherWidget = new WeatherWidget(document.getElementById("WeatherConditionWidget"));
+    weatherWidget.start();
 };
-//# sourceMappingURL=app.js.map
