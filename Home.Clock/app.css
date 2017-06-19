@@ -92,8 +92,29 @@ span {
     color:#FFF;
     background-color:rgba(0,0,0,0.5);
 }
+
+#WeatherConditionWidget #TempetureFullString {
+    font-size:24px;
+}
+
+#WeatherConditionWidget #RelativeHumidityString {
+    font-size: 24px;
+}
+
+#WeatherConditionWidget #UV {
+    font-size: 24px;
+}
+
+    #WeatherConditionWidget #Location {
+        font-size: 10px;
+    }
+
+    #WeatherConditionWidget #ObservationTime {
+        font-size: 10px;
+    }
+
 #WeatherConditionWidget table td {
-    padding:0px;
+    padding:4px;
 }
 
 #PhotoWidget {
@@ -111,4 +132,5 @@ span {
     #PhotoWidget img {
         max-width:100%;
         max-height: 100%;
+        vertical-align: middle;
     }

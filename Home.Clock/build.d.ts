@@ -57,6 +57,14 @@ declare class PhotoWidget extends WidgetBase {
     private findRandomImage();
     start(): void;
 }
+declare class WeatherWidget extends WidgetBase {
+    private _weatherConditionService;
+    private _weatherWarningService;
+    constructor(element: HTMLElement);
+    start(): void;
+    private updateWeatherCondition();
+    private createWeatherService(weatherService, rootPath, apiKey, requestUrl);
+}
 interface IRenderer {
     render(weatherWarnings: Array<WeatherWarning>): any;
 }
@@ -69,11 +77,6 @@ declare abstract class IWeatherService {
     constructor(rootPath: string, apiKey: string, requestUrl: string);
     abstract findCurrentObservation(latitude: number, longitude: number, doneCallback: JQueryPromiseCallback<any>, failCallBack: JQueryPromiseCallback<any>): any;
     abstract findWeatherWarnings(doneCallback: JQueryPromiseCallback<any>, failCallBack: JQueryPromiseCallback<any>): any;
-}
-declare class ObservatoryWeatherService extends IWeatherService {
-    private _weatherWarningWebPath;
-    findCurrentObservation(latitude: number, longitude: number, doneCallback: JQueryPromiseCallback<any>, failCallBack: JQueryPromiseCallback<any>): void;
-    findWeatherWarnings(doneCallback: JQueryPromiseCallback<any>, failCallBack: JQueryPromiseCallback<any>): void;
 }
 declare class WeatherCondition {
     DataSource: string;
@@ -96,17 +99,14 @@ declare class WeatherWarning {
     name: string;
     publishDate: Date;
 }
+declare class ObservatoryWeatherService extends IWeatherService {
+    private _weatherWarningWebPath;
+    findCurrentObservation(latitude: number, longitude: number, doneCallback: JQueryPromiseCallback<any>, failCallBack: JQueryPromiseCallback<any>): void;
+    findWeatherWarnings(doneCallback: JQueryPromiseCallback<any>, failCallBack: JQueryPromiseCallback<any>): void;
+}
 declare class WeatherWarningRenderer implements IRenderer {
     private _element;
     constructor(element: HTMLElement);
     render(weatherWarnings: Array<WeatherWarning>): void;
     private createNewDiv(html);
-}
-declare class WeatherWidget extends WidgetBase {
-    private _weatherConditionService;
-    private _weatherWarningService;
-    constructor(element: HTMLElement);
-    start(): void;
-    private updateWeatherCondition();
-    private createWeatherService(weatherService, rootPath, apiKey, requestUrl);
 }

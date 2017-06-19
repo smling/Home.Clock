@@ -38,8 +38,8 @@ var WeatherWidget = (function (_super) {
             document.getElementById("Location").textContent = result.Location;
             document.getElementById("ObservationTime").textContent = result.ObservationTime.toString();
             document.getElementById("RelativeHumidityString").textContent = result.RelativeHumidityString;
-            document.getElementById("TempetureFullString").textContent = result.TempetureFullString;
-            document.getElementById("UV").textContent = result.UV.toString();
+            document.getElementById("TempetureFullString").textContent = result.TempetureInCensus.toString() + " C";
+            document.getElementById("UV").textContent = "UV: " + result.UV.toString();
         }, function (data) {
             alert(data.message);
         });
